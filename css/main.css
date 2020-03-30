@@ -1,0 +1,89 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* reset box sizing */
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* set defaults */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p, blockquote {
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* container styles */
+.container {
+    text-align: center;
+    padding: 0.8em 1.5em;
+}
+
+.logo {
+    width: 120px;
+    align-self: flex-start;
+}
+
+.menu {
+    width: 25px;
+    margin-top: 45%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hide-mobile{
+    display: none;
+}
+
+.product-image {
+    width: 60%;
+    margin: 5em auto 5em 20%;
+}
+
+.blue-container {
+    width: 100%;
+    background-color: #00C2FF;
+    color: #FFF;
+    margin-top: 5%;
+    padding: 5em 0 2em;
+    border-top-left-radius: 50px;
+    transform: skewY(-2deg);
+}
+.blue-container ul {
+    transform: skewY(2deg);
+}
+
+.blue-container:before { 
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #00C2FF;
+    position: absolute;
+    top: -38px;
+    right: 0;
+}
+
+.blue-container:after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: #FFF;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    border-radius: 50%;
+}
+
