@@ -50,7 +50,12 @@ header {
 
 .product-image {
     width: 60%;
-    margin: 5em auto 5em 20%;
+    margin: 5em auto 3em 20%;
+}
+
+.middle-section {
+    z-index: 1;
+    position: relative;
 }
 
 .blue-container {
@@ -74,6 +79,7 @@ header {
     position: absolute;
     top: -38px;
     right: 0;
+    z-index: -3;
 }
 
 .blue-container:after {
@@ -85,6 +91,7 @@ header {
     top: -80px;
     right: 0;
     border-radius: 50%;
+    z-index: -2;
 }
 
 .blue-container li {
@@ -96,11 +103,11 @@ header {
 }
 
 .blue-container img {
-    width: 5%;
+    width: 20%;
 }
 
 .blue-container ul li:nth-child(3) img {
-    width: 3em;
+    width: 15%;
 }
 
 
@@ -125,7 +132,7 @@ cite {
 }
 
 .get-started {
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
 .get-started-btn {
@@ -135,47 +142,83 @@ cite {
     padding: 0.5em 3em;
     border-radius: 5em;
     color: white;
-    font-size: 1.5em;
-    margin: 2% auto 8%;
+    font-size: 1.3em;
+    margin: 1% auto 6%;
+    width: 100%;
 }
+
 
 .footer-container {
     width: 100%;
     background: #3D444A;
     color: #FFF;
-    padding: 2em 0;
-    border-top-right-radius: 50px;
-    transform: skewY(2deg);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 2em 0 1em;
 }
 
-.footer-container .container {
-    transform: skewY(-2deg);
-}
-
-.footer-container:before {
-    content: "";
-    width: 40px;
-    height: 40px;
-    background: #3D444A;
-    position: absolute;
-    top: -39px;
-    left: 0;
-}
-
-.footer-container:after {
-    content: "";
-    width: 80px;
-    height: 80px;
-    background: #FFF;
-    position: absolute;
-    top: -80px;
-    left: 0;
-    border-radius: 50%;
-}
-
-ul.footer-links a{
-    color: #9D9D9D;
-    text-decoration: none;
+.footer-links a{
     margin: 0.5em;
+    text-decoration: none;
+    color: #9D9D9D;
     font-size: 0.9em;
+}
+
+nav ul {
+    position: fixed;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    background-color:rgb(56, 59, 61);
+    z-index: 7;
+}
+nav ul li a{ 
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 1em 2em;
+    background-color:rgb(74, 80, 83)
+}
+
+nav ul li a:hover {
+    background-color:rgb(112, 121, 124)
+}
+
+.exit-btn {
+    margin: 1em 0.5em;
+    text-align: right;
+    padding: 0.2em 0.5em;
+}
+
+.exit-btn img {
+    width: 15px;
+    cursor: pointer;
+}
+
+/* media query for desktop version */
+
+@media only screen and (min-width: 650px) {
+    .middle-section h1{
+        font-size: 3em;
+    }
+    .sub-head {
+        font-size: 1.5em;
+        margin-bottom: 10%;
+    }
+    .blue-container img {
+        width: 20%;
+    }
+    .blue-container ul li:nth-child(3) img {
+        width: 12%;
+    }
+    .blue-container ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .get-started-btn {
+        width: 40%;
+    }
 }
